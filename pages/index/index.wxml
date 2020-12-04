@@ -1,89 +1,56 @@
 <!--index.wxml-->
 <view class="header">
-  <van-search value="{{ value }}" shape="round"background="#222831" placeholder="请输入搜索关键词" use-action-slot bind:change="onChange" bind:search="onSearch" >
+  <van-search value="{{ value }}" shape="round"background="#393e46" placeholder="请输入搜索关键词" use-action-slot bind:change="onChange" bind:search="onSearch" >
     <view slot="action" bind:tap="onClick" style="color:#ffd369">搜索</view>
   </van-search>
-  <div class="other-search">
-    <div class="other-search-body">
+  <view class="other-search">
+    <view class="other-search-body">
       <image style=" width:1rem; height:1rem" src="../../images/ASR.png"/>
       <p>语音识别</p>
-    </div>
-    <div class="other-search-body">
+    </view>
+    <view class="other-search-body">
       <image style=" width:1rem; height:1rem" src="../../images/takePhotos.png"/>
       <p>拍照识别</p>
-    </div>
-  </div>
+    </view>
+  </view>
+</view>
+<view class="center-body">
   <van-grid column-num="4">
-    <van-grid-item use-slot>
-      <image
-        style="width: 4rem; height: 4rem;"
-        src="https://img.yzcdn.cn/vant/cat.jpeg"
-      />
-      <p>文字</p>
-    </van-grid-item>
-    <van-grid-item use-slot>
-      <image
-        style="width: 4rem; height: 4rem;"
-        src="https://img.yzcdn.cn/vant/cat.jpeg"
-      />
-    </van-grid-item>
-    <van-grid-item use-slot>
-      <image
-        style="width: 4rem; height: 4rem;"
-        src="https://img.yzcdn.cn/vant/cat.jpeg"
-      />
-    </van-grid-item>
-    <van-grid-item use-slot>
-      <image
-        style="width: 4rem; height: 4rem;"
-        src="https://img.yzcdn.cn/vant/cat.jpeg"
-      />
+    <van-grid-item use-slot wx:for="{{classLists.data.results}}" wx:for-item="item"  bind:open='onOpen(item.id)'>
+      <image style="width: 4rem; height: 4rem;" src="{{item.classUrl}}"/>
+      <p>{{item.className}}</p>
     </van-grid-item>
   </van-grid>
-  <!-- <van-row class="header-center">
-    <van-col span="6">
-      <van-image
-        width="4rem"
-        height="4rem"
-        fit="cover"
-        src="https://img.yzcdn.cn/vant/cat.jpeg"
-      />
-    </van-col>
-    <van-col span="6">
-      <van-image
-        width="4rem"
-        height="4rem"
-        fit="cover"
-        src="https://img.yzcdn.cn/vant/cat.jpeg"
-      />
-    </van-col>
-    <van-col span="6">
-      <van-image
-        width="4rem"
-        height="4rem"
-        fit="cover"
-        src="https://img.yzcdn.cn/vant/cat.jpeg"
-      />
-    </van-col>
-    <van-col span="6">
-      <van-image
-        width="4rem"
-        height="4rem"
-        fit="cover"
-        src="https://img.yzcdn.cn/vant/cat.jpeg"
-      />
-    </van-col>
-  </van-row> -->
+  <van-tabs 
+    active="{{ active }}"
+    bind:change="onChange"
+    line-width="50px"
+    color="#393e46"
+  >
+    <van-tab title="最新">
+      <view class="article-skeleton">
+        <van-skeleton title avatar row="1" loading="{{ loading }}">
+          <view class="article">
+              <view class="active-img">
+                <van-image
+                  round
+                  width="2rem"
+                  height="2rem"
+                  src="https://img.yzcdn.cn/vant/cat.jpeg"
+                />
+              </view>
+              <view class="active-right">
+                <view class="active-title">标题</view>
+                <view class="active-content">内容标题标题</view>
+              </view>
+          </view>
+        </van-skeleton>
+      </view>
+    </van-tab>
+    <van-tab title="最热">内容 2</van-tab>
+  </van-tabs>
 </view>
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<!-- 登录悬浮按钮 -->
+<view class="login" bindtap='getUserInfo'>
+  <p wx:if="{{!hasUserInfo && canIUse}}"> 登录 </p>
 </view>

@@ -1,13 +1,11 @@
 /**index.wxss**/
 page{
-  background: #222831;
+  background: #fff;
 }
-
 .other-search {
   display: flex;
-  margin-bottom:10px;
+  padding-bottom:10px;
 }
-
 .other-search-body {
   font-size: 14px;
   color: #ffd369;
@@ -17,47 +15,64 @@ page{
   justify-content: center;
   align-items: center;
 }
-
 .header {
-  margin-bottom: 3px;
-  background: #222831;
+  background: #393e46;
 }
 .header-tab {
   font-size: 16px;
   padding: 5px 14px;
 }
-
 .header-center {
   text-align: center;
 }
-
 .header-title {
   font-size: 10px;
   color: #fff;
 }
-
-.userinfo {
+.center-body {
+  background: #fff;
+  font-weight: 700;
+  font-size: 15px;
+}
+.center-body p{
+  color: #222831;
+}
+.article {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding:10px 16px;
+  border-bottom: 1rpx solid #eee;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.active-img {
+  padding-right: 16px;
 }
-
-.userinfo-nickname {
-  color: #aaa;
-  background: #393e46;
+.active-right {
+  padding-top: 8px;
 }
-
-.usermotto {
-  margin-top: 200px;
+.active-content {
+  font-weight: 500;
+  padding-top: 8px;
+  color: #999;
 }
-
-.van-search__content{
-  border: 2px solid #ffd369;
+.active-right, .active-title, .active-content{
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.login{
+  position: fixed;
+  width:50px;
+  height:50px;
+  bottom: 60px;
+  right: 10px;
+  border-radius: 50px;
+  background: #ffd369;
+  box-shadow: 2px 2px 2px #999;
+  color: #222831;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+  z-index: 999;
 }
