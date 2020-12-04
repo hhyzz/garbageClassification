@@ -1,0 +1,6 @@
+<van-tabbar active="{{ active }}" active-color="#222831" bind:change="onChange">
+    <van-tabbar-item icon="{{icon.home}}">首页</van-tabbar-item>
+    <van-tabbar-item icon="{{icon.forum}}">论坛</van-tabbar-item>
+    <van-tabbar-item icon="{{icon.test}}">答题</van-tabbar-item>
+    <van-tabbar-item icon="{{icon.person}}">个人</van-tabbar-item>
+</van-tabbar>

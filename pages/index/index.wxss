@@ -1,0 +1,63 @@
+/**index.wxss**/
+page{
+  background: #222831;
+}
+
+.other-search {
+  display: flex;
+  margin-bottom:10px;
+}
+
+.other-search-body {
+  font-size: 14px;
+  color: #ffd369;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  margin-bottom: 3px;
+  background: #222831;
+}
+.header-tab {
+  font-size: 16px;
+  padding: 5px 14px;
+}
+
+.header-center {
+  text-align: center;
+}
+
+.header-title {
+  font-size: 10px;
+  color: #fff;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+  background: #393e46;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.van-search__content{
+  border: 2px solid #ffd369;
+}
