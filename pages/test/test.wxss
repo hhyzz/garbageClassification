@@ -1,0 +1,78 @@
+/* pages/test/test.wxss */
+page {
+  background: #f7fbfc;
+}
+
+.container {
+ padding: 30rpx 0;
+}
+
+swiper{
+  width: 95%;
+  height: 350rpx;
+  background-color: #555;
+  margin:0 auto;
+  border-radius: 30rpx;
+}
+
+swiper image{
+  width: 100%;
+  height: 100%;
+}
+
+.test-box {
+  margin-top: 30rpx;
+  width: 100%;
+  background-color: #fff;
+}
+
+.title {
+  width: 90%;
+  padding-top: 30rpx;
+  margin: 30rpx auto;
+  font-weight: bold;
+  color: #888;
+}
+
+.options {
+  width: 95%;
+  margin: 30rpx auto;
+}
+
+.options-btn {
+  background-color: #f7fbfc;
+  width: 80%;
+  font-size: 14px;
+  margin: 15rpx auto;
+  box-shadow: 0 0 20rpx rgba(1,0,1,0.1);
+  color: #999;
+}
+
+.options-btn:active {
+  background-color: #6e9bcc;
+  color: #fff;
+}
+
+.checked_parameter {
+  background-color: #6e9bcc;
+  color: #fff; 
+}
+
+.goTest {
+  margin-bottom: 150rpx;
+}
+
+.goTest-btn {
+  width: 80%;
+  margin-top:80rpx;
+  margin-bottom: 20rpx;
+  font-size: 38rpx;
+  font-weight: bold;
+  box-shadow: 0 0 20rpx rgba(1,0,1,0.2);
+  background-color:#6e9bcc;
+  color: #fff;
+}
+
+.goTest-btn:active{
+    background-color: #517ead;
+}

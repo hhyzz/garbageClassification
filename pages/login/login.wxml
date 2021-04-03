@@ -1,0 +1,73 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <!-- 登录 -->
+    <view class="login-box" wx:if="{{isLogin}}">
+        <form bindsubmit="checkInput" method="post">
+          <text class="list-title">用户名:</text>
+          <input bindchange="account" name="account" type="number" auto-focus="true"/>
+          <text class="list-title">密码:</text>
+          <input bindchange="password" name="password" type="password" />
+          <view>
+            <button class="btn login-btn" formType="submit" style="margin-right:4%">登录</button>
+            <button class="btn register-btn" bindtap="toChangeBox">注册</button>
+          </view>
+          <!-- <view class="link link-register">没有账号？点击注册</view> -->
+          <view class="link link-lostPwd" bindtap="showMask">？忘记密码</view>
+        </form>
+    </view>
+  <!-- 注册 -->
+    <view class="login-box" wx:else>
+        <form bindsubmit="checkInput" method="post">
+          <text class="list-title">用户名:</text>
+          <input bindchange="account" name="account" type="number" auto-focus="true"/>
+          <text class="list-title">密码:</text>
+          <input bindchange="password" name="password" type="password" />
+          <text class="list-title">手机号码:</text>
+          <input bindchange="account" name="phone" type="number"/>
+          <view class="verification">
+            <input name="verificationCode" type="number"></input>
+            <button>获取验证码</button>
+          </view>
+          <view>
+            <button class="btn register-btn" formType="submit" style="margin-right:4%" bindtap="toChangeBox">登录</button>
+            <button class="btn login-btn" bindtap="toRegister">注册</button>
+          </view>
+        </form>
+    </view>
+</view>
+<!-- 遮罩层 -->
+<view class='mask' hidden="{{ismask}}">
+  <view class="verification-box">
+    <view class="hiddenMask" bindtap="showMask">×</view>
+    <view  wx:if="{{isNoVerified}}">
+      <form bindsubmit="checkInput" method="post">
+        <text class="list-title">手机号码:</text>
+        <input bindchange="account" name="phone" type="number"/>
+        <view class="verification">
+          <input name="verificationCode" type="number"></input>
+          <button>获取验证码</button>
+        </view>
+        <view>
+          <button class="verificationButton" formType="submit" style="margin-right:4%" bindtap="toVerify">验证</button>
+        </view>
+      </form>
+    </view>
+    <!-- 验证成功后修改密码 -->
+    <view wx:else>
+      <form bindsubmit="checkInput" method="post">
+        <text class="list-title">新密码:</text>
+        <input bindchange="password" name="password" type="password" />
+        <text class="list-title">再次输入密码:</text>
+        <input bindchange="password" name="password" type="password" />
+        <view>
+          <button class="verificationButton" formType="submit" style="margin-right:4%" bindtap="toVerify">确认</button>
+        </view>
+      </form>
+    </view>
+  </view>
+</view>
+
+<!-- 背景图 -->
+<view class = "background-image" >
+  <image src='../../images/lajifenlei.png'></image>
+</view>

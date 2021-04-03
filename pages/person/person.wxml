@@ -1,0 +1,66 @@
+<!--pages/person.wxml-->
+<view class="person-card">
+  <view class="person-info">
+    <van-row>
+      <van-col offset="2" span="5">
+        <view class="person-img">
+          <van-image
+            round
+            width="3rem"
+            height="3rem"
+            src="https://img.yzcdn.cn/vant/cat.jpeg"
+          />
+        </view>
+      </van-col>
+      <van-col span="16">
+        <view class="person-right">
+          <view class="person-name">
+            <text>用户名</text>
+            <view style="float:right"><van-icon name="edit" /></view>
+          </view>
+          <view class="person-id">ID：{{id}}</view>
+        </view>
+      </van-col>
+    </van-row>
+  </view> 
+  <view class="person-level">
+    <view class="level-box">
+      <span class="level">LV：1</span>
+      <span class="next-level">999/1000</span>
+    </view>
+    <view class="progress">
+    <van-progress
+      percentage="{{progressValue}}"
+      stroke-width="3"
+      show-pivot="{{false}}"
+      pivot-color="#6e9bcc"
+      color="#6e9bcc"
+    />
+    </view>
+  </view>
+</view>
+<view class="info-box">
+  <van-cell title="消息" is-link value="99" value-class="info-number">
+   <image
+      slot="icon"
+      src="../../images/bell.png"
+      mode="aspectFit"
+      class="info-icon"
+    />
+  </van-cell>
+</view>
+
+
+<view class="title">我的帖子</view>
+<view class="my-post">
+  <view>
+    <van-empty description="还未发布帖子!">
+      <view class="goPost" bindtap="goPost">现在去发布吧>></view>
+    </van-empty>
+  </view>
+  <view class="post-box">
+    <view class="post-title">我是标题</view>
+    <view class="post-intro">我是简介我是简介我是简介我是简介我是简介我是简介我是简介我是简介我是简介我是简介</view>
+    <view class="post-time">1999-11-29</view>
+  </view>
+</view>

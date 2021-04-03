@@ -1,0 +1,65 @@
+/* pages/testTime/testTime.wxss */
+.topic {
+  height: 150px;
+  width: 100%;
+  color: #555;
+  font-size: 30px;
+  text-align: center;
+  line-height: 150px;
+}
+
+.tips {
+  margin:0 0 80rpx 30rpx;
+  font-size: 36rpx;
+  color: #999;
+}
+
+.answer-options {
+  width: 50%;
+  float: left;
+  margin-bottom: 80rpx;
+}
+
+.answer-options button{
+  width: 80%;
+  background-color: #fff;
+  line-height: 2;
+  color: #6e9bcc;
+  font-size: 38rpx;
+  padding: 10rpx 0;
+  box-shadow: 0px 0px 3px #999;
+}
+
+.checked_parameter {
+  background-color: #6e9bcc !important;
+  color: #fff !important; 
+}
+
+.next {
+  width: 100%;
+  text-align: center;
+  padding: 70rpx 0 40rpx 0;
+  clear: both;
+}
+
+.verificationButton{
+  width: 60%;
+  margin-top: 50rpx;
+  font-size: 38rpx;
+  font-weight: bold;
+  box-shadow: 0 0 20rpx rgba(1,1,1,0.3);
+  background-color:#6e9bcc;
+  color: #fff;
+  border-radius: 50rpx;
+}
+
+.verificationButton:active{
+    background-color: #517ead;
+}
+
+.bottom {
+  width: 100%;
+  color: #999;
+  font-size: 35rpx;
+  text-align: center;
+}

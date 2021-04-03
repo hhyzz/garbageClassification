@@ -1,0 +1,28 @@
+<!--pages/result/result.wxml-->
+<view>
+  <view class="title">本次答题结果：</view>
+  <view class="result">
+    <van-circle value="{{ 90 }}" stroke-width="5" text="{{result}}分" color="#6e9bcc" layer-color="#d8e4f4"/>
+  </view>
+  <view class="accuracy">
+    <view class="true-color"></view>
+    <view>正确:18道</view>
+    <view class="error-color"></view>
+    <view>错误:12道</view>
+  </view>
+</view>
+<view class="parse">
+  <van-row wx:for="{{numberOptions}}">
+    <view class="parse-row">
+      <van-col span="7"><view class="parse-col">数据线</view></van-col>
+      <van-col span="7"><view class="parse-col">有害垃圾</view></van-col>
+      <van-col span="7"><view class="parse-col">可回收物</view></van-col>
+      <van-col span="3">
+        <view class="parse-col">
+          <!-- <van-icon name="close" size="18px" color="rgb(238, 10, 36)"/> -->
+          <van-icon name="passed" size="18px" color="rgb(7, 193, 96)"/>
+        </view>
+      </van-col>
+    </view>
+  </van-row>
+</view>

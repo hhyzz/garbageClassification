@@ -1,0 +1,104 @@
+/* pages/search/search.wxss */
+page {
+ background-color: #f7fbfc;
+}
+
+.search-btn {
+  color:#fff;
+}
+
+.search-btn:active {
+  color:#6e9bcc;
+}
+
+.history {
+  margin: 30rpx;
+}
+
+.tips {
+  margin-bottom: 30rpx;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.tips text{
+  margin-right: 10rpx;
+}
+
+.options {
+  background-color: #fff;
+  float: left;
+  padding: 10rpx 20rpx;
+  font-size: 34rpx;
+  border-radius: 50rpx;
+  margin-right: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.mask{
+  width:100%;
+  height:100%;
+  position:fixed;
+  background-color:rgb(153, 153, 153, 0.5);
+  z-index:9999;
+  top:0;
+  left:0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 100rpx;
+}
+
+.search-results {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.search-worlds {
+  padding-top: 40rpx;
+  font-size: 40rpx;
+  text-align: center;
+  color: #555;
+}
+
+.search-class {
+  padding-top: 20rpx;
+  text-align: center;
+}
+
+.class-claim {
+  padding: 0 40rpx;
+}
+
+.claim-title {
+  font-weight: bold;
+  color: #6e9bcc;
+  display: flex;
+  align-items: center;
+}
+
+.claim-options {
+  color: #555;
+  font-size: 35rpx;
+  padding-top: 10rpx;
+  line-height: 45rpx;
+}
+
+.finger {
+  font-size: 45rpx;
+  padding: 0 5rpx;
+}
+
+.bottom-btn {
+  margin-top: 40rpx;
+  border-top: 2rpx solid #eee;
+  border-bottom-right-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+  padding: 20rpx 0;
+  text-align: center;
+  color: #6e9bcc;
+}

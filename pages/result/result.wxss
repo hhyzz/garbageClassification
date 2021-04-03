@@ -1,0 +1,65 @@
+/* pages/result/result.wxss */
+page {
+  background: #fff;
+}
+
+.title {
+  height: 50px;
+  width: 90%;
+  color: #555;
+  margin: auto;
+  line-height: 50px;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+}
+
+.accuracy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35rpx;
+  color: #555;
+  margin: 20rpx 0 30rpx 0;
+}
+
+.accuracy view {
+  margin-right: 10rpx;
+}
+
+.true-color {
+  width: 40rpx;
+  height: 30rpx;
+  background-color: #6e9bcc;
+}
+
+.error-color {
+  width: 40rpx;
+  height: 30rpx;
+  background-color: #d8e4f4;
+}
+
+.parse {
+  margin:50rpx 0;
+  padding: 0 10rpx;
+}
+
+.parse-row {
+  margin-bottom: 25rpx;
+}
+
+.parse-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d8e4f4;
+  padding: 5rpx;
+  height: 45rpx;
+  font-size: 35rpx;
+  color: #555;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow:ellipsis;
+}

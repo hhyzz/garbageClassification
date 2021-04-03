@@ -1,0 +1,28 @@
+<!--pages/editPost/editPost.wxml-->
+<view class="head">
+  <view class="cancel" bindtap="cancel">取消</view>
+  <view class="issue">
+    <button class='issue-btn {{title_length>0?"buttonCheckde":""}}' bindtap="goEdit">
+      发布
+    </button>
+  </view>
+</view>
+<view class="title">
+  <van-row>
+    <van-col span="2">
+      <van-icon name="smile-o" size="20px"/></van-col>
+    <van-col span="22">
+      <input class="weui-input" auto-focus placeholder="输入文章标题" bindinput="inputsTitle"/>
+    </van-col>
+  </van-row>
+</view>
+<view class="content">
+  <textarea placeholder="和大家讨论些什么" auto-height="true" maxlength='1000' bindinput="inputsContent" />
+</view>
+<view class="add-image">
+  <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" />
+</view>
+<view class="bottom">
+  <text>{{text_length}} / 1000</text>
+</view>
+

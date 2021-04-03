@@ -2,13 +2,21 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/indexBar/indexBar"
+    "pages/indexBar/indexBar",
+    "pages/person/person",
+    "pages/test/test",
+    "pages/forum/forum",
+    "pages/login/login",
+    "pages/editPost/editPost",
+    "pages/testTime/testTime",
+    "pages/result/result",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ffd369",
+    "navigationBarBackgroundColor": "#6e9bcc",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "custom": true,
@@ -18,16 +26,16 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/forum/forum",
         "text": "论坛"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/test/test",
         "text": "答题"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "个人"
+        "pagePath": "pages/person/person",
+        "text": "我的"
       }
     ]
   },
@@ -43,7 +51,17 @@
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index",
     "van-skeleton": "@vant/weapp/skeleton/index",
-    "van-dialog": "@vant/weapp/dialog/index"
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-circle": "@vant/weapp/circle/index"
   },
   "sitemapLocation": "sitemap.json"
 }

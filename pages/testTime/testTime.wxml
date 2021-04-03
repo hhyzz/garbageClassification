@@ -1,0 +1,12 @@
+<!--pages/testTime/testTime.wxml-->
+<view class="topic">数据线</view>
+<view class="answer-box">
+  <view class="tips">请选择以下选项</view>
+  <view class='answer-options' wx:for="{{answerOptions}}">
+    <button class='{{item.checked?"checked_parameter":""}}' data-id='{{item.id}}' bindtap='radioChoose'>{{item.name}}</button>
+  </view>
+</view>
+<view class="next">
+  <button class="verificationButton" bindtap="goNext">下一题</button>
+</view>
+<view class="bottom"><text>第1题 / 共10题</text></view>

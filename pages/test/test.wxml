@@ -1,0 +1,42 @@
+<!--pages/test/test.wxml-->
+<view class="container">
+  <swiper 
+    indicator-dots="{{true}}" 
+    autoplay="{{true}}" 
+    indicator-color="rgba(255, 255, 255, .3)"
+    indicator-active-color="#fff"
+  >
+    <block wx:for="{{scopeOptions}}" wx:key="*this">
+      <swiper-item>
+        <image
+          slot="icon"
+          src="../../images/bell.png"
+          mode="aspectFit"
+          class="info-icon"
+        />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view>
+  <van-notice-bar
+    color="#a0d0ec"
+    background="#fff"
+    left-icon="flower-o"
+    text="给垃圾一个分类的归宿，还我们一个清洁的世界！"
+  />
+</view>
+<view class="test-box">
+  <view class="title">
+  <van-icon name="records" size="15px" color="#fd9a16"/>选择答题题数(单选):</view>
+  <view class="options">
+    <van-row>
+      <van-col span="12" wx:for="{{numberOptions}}">
+        <button class='options-btn {{item.checked?"checked_parameter":""}}' data-id='{{item.id}}' bindtap='radioChoose'>{{item.name}}</button>
+      </van-col>
+    </van-row>
+  </view>
+  <view class="goTest">
+    <button class="goTest-btn" bindtap="toVerify">开始答题</button>
+  </view>
+</view>

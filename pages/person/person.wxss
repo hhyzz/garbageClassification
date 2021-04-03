@@ -1,0 +1,147 @@
+/* pages/person.wxss */
+page{
+  background: #f7fbfc;
+  padding-bottom: 150rpx;
+}
+
+.person-card {
+  width: 90%;
+  height: 300rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  box-shadow: 0 0 20rpx rgba(1,0,1,0.1);
+  margin:50rpx auto;
+}
+
+.person-info {
+  padding-top: 30rpx;
+}
+
+.person-right{
+  width: 90%;
+  margin-top: 10rpx;
+}
+
+.person-name {
+  font-weight: bold;
+}
+
+.person-id {
+  color: #555;
+  font-size: 25rpx;
+  margin-top: 10rpx;
+}
+
+.person-level {
+  margin-top: 30rpx;
+}
+
+.level-box {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.level {
+  color: #fff;
+  font-size: 34rpx;
+  font-weight: bold;
+  -webkit-text-stroke: 3rpx #6e9bcc;
+}
+
+.next-level {
+  color: #999;
+  margin-left: 40rpx;
+  font-size: 30rpx;
+}
+
+.progress {
+  width: 85%;
+  margin: 30rpx auto;
+}
+
+.info-box {
+  width: 90%;
+  height: 100rpx;
+  background-color: #fff;
+  border-radius: 50rpx;
+  box-shadow: 0 0 20rpx rgba(1,0,1,0.1);
+  margin:50rpx auto;
+}
+
+.van-cell {
+  border-radius: 50rpx;
+}
+
+.info-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin: auto;
+  margin-right: 15rpx;
+}
+
+.info-number {
+  color: #FF9812 !important;
+}
+
+.title {
+  width: 85%;
+  margin: 30rpx auto;
+  color: #999;
+}
+
+.my-post {
+  width: 90%;
+  height: 880rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  box-shadow: 0 0 20rpx rgba(1,0,1,0.1);
+  margin:0 auto;
+  padding: 30rpx 0;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.goPost {
+  color: #6e9bcc;
+  text-align: center;
+  font-size: 14px;
+  margin-top: -20rpx;
+}
+
+.post-box {
+  width: 85%;
+  background-color: #fff;
+  margin:20rpx auto;
+  height: 200rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 0 20rpx rgba(1,0,1,0.1);
+  padding: 20rpx;
+}
+
+.post-title {
+  color: #6e9bcc;
+  font-weight: bold;
+  display: inline-block;
+  white-space: nowrap; 
+  width: 100%; 
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+.post-intro {
+  margin-top: 10rpx;
+  color:#555;
+  font-size: 35rpx;
+  width:100%;
+	word-break:break-all;
+	display:-webkit-box;
+	-webkit-line-clamp:2;
+	-webkit-box-orient:vertical;
+	overflow:hidden;
+}
+
+.post-time {
+  margin-top: 20rpx;
+  color: #999;
+  font-size: 30rpx;
+}

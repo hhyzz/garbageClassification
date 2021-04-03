@@ -1,27 +1,40 @@
 /**index.wxss**/
 page{
-  background: #fff;
+  background: #f7fbfc;
 }
+
+.search-btn {
+  color:#fff;
+}
+
+.search-btn:active {
+  color:#6e9bcc;
+}
+
 .other-search {
   display: flex;
   padding-bottom:10px;
 }
+
 .other-search-body {
   font-size: 14px;
-  color: #ffd369;
+  color: #fff;
   width: 50%;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .header {
-  background: #393e46;
+  background: #6e9bcc;
 }
+
 .header-tab {
   font-size: 16px;
   padding: 5px 14px;
 }
+
 .header-center {
   text-align: center;
 }
@@ -29,37 +42,33 @@ page{
   font-size: 10px;
   color: #fff;
 }
+
 .center-body {
-  background: #fff;
+  background-color: rgb(247, 251, 252, 0.8);
   font-weight: 700;
   font-size: 15px;
+  height: 450px;
 }
-.center-body p{
-  color: #222831;
+
+.choose-box {
+  display:flex;
+  align-items: center; 
+  justify-content: center;
+
 }
-.article {
-  display: flex;
-  box-sizing: border-box;
-  width: 100%;
-  padding:10px 16px;
-  border-bottom: 1rpx solid #eee;
+
+.image-box {
+  width: 75%;
+  margin:80rpx 12.5% 0 12.5%;
+  display:flex;
+  align-items: center; 
+  justify-content: center;
+  background-color: rgb(255, 255, 255, .9);
+  border-radius: 30rpx;
+  padding: 30rpx 0;
+  box-shadow:  0px 0px 5px #999;
 }
-.active-img {
-  padding-right: 16px;
-}
-.active-right {
-  padding-top: 8px;
-}
-.active-content {
-  font-weight: 500;
-  padding-top: 8px;
-  color: #999;
-}
-.active-right, .active-title, .active-content{
-  white-space: nowrap; 
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+
 .login{
   position: fixed;
   width:50px;
@@ -67,12 +76,26 @@ page{
   bottom: 60px;
   right: 10px;
   border-radius: 50px;
-  background: #ffd369;
-  box-shadow: 2px 2px 2px #999;
-  color: #222831;
-  font-weight: bold;
-  font-size: 16px;
+  background: #6e9bcc;
+  box-shadow: 3px 3px 3px #999;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
   line-height: 50px;
   text-align: center;
   z-index: 999;
+  padding: 0;
+}
+
+button::after {
+  border: 0px solid rgba(0,0,0,.2);
+}
+
+.background-image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  z-index: -999;
 }

@@ -1,0 +1,53 @@
+<!--pages/search/search.wxml-->
+
+<!-- 文字搜索 -->
+<view class="text-search" wx:if="{{way == 0}}">
+  <view>
+    <van-search shape="round" background="#6e9bcc" placeholder="请输入搜索关键词" use-action-slot value="{{value}}" bind:change="onChange">
+      <view slot="action" bind:tap="onSearch" class="search-btn">搜索</view>
+    </van-search>
+  </view>
+  <view class="history">
+    <view class="tips">
+      <text>搜索历史</text>
+      <van-icon name="delete" bindtap="clearSearchStorage" size="20px"/>
+    </view>
+    <view class="options-box">
+      <van-empty image="search" description="没有搜索记录" wx:if="{{!haveHistory}}"/>
+      <view class="options" wx:for="{{searchStorage}}" wx:key="item.name" data-name="{{item.name}}" bindtap="historySearch">{{item.name}}</view>
+    </view>
+  </view>
+</view>
+
+<!-- 语音搜索 -->
+<view class="voice-search"  wx:if="{{way == 1}}">
+  <view class="voiceRecording" bindtouchstart="touchStart" bindtouchend="touchEnd">
+      <image src="../../images/kehuishouwu.png"></image>
+      <text>按住说出你想要的车型名称，松开自动识别</text>
+  </view>
+</view>
+
+<!-- 拍照搜索 -->
+<view class="photo-search"  wx:if="{{way == 2}}">
+</view>
+
+<!-- 结果模块 -->
+<view class='mask' hidden="{{!isMask}}">
+  <view class="search-results">
+    <view class="search-worlds">{{searchResults.name}}</view>
+    <view class="search-class">
+      <image style="width: 6rem; height: 6rem;" src="{{searchResults.classUrl}}"/>
+    </view>
+    <view class="class-claim">
+      <view class="claim-title">
+        <van-icon name="warn-o" size="20px"/>
+        <text>投放要求:</text>
+      </view>
+      <view class="claim-options" wx:for="{{searchResults.tips}}">
+        <text class="finger">☞</text>
+        <text>{{item}}</text>
+      </view>
+    </view>
+    <view class="bottom-btn" bindtap="hiddenMask"> 确定</view>
+  </view>
+</view>

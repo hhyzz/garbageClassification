@@ -1,0 +1,100 @@
+<!--pages/forum/forum.wxml-->
+<!-- 轮播图 -->
+<view class="container">
+  <swiper 
+    autoplay="{{true}}" 
+  >
+    <block wx:for="{{scopeOptions}}" wx:key="*this">
+      <swiper-item>
+        <image
+          slot="icon"
+          src="../../images/bell.png"
+          mode="aspectFit"
+          class="info-icon"
+        />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!-- 置顶热门部分 -->
+<view class="top-search">
+  <view class="top">
+    <van-tag color="#000" >置顶</van-tag>
+    <span>#创造营#反正就是还蛮喜欢刘宇还有林墨的</span>
+  </view>
+  <view class="hot" wx:for="{{scopeOptions}}">
+    <van-tag color="#6e9bcc">热门</van-tag>
+    <span>#创造营#反正就是还蛮喜欢刘宇还有林墨的</span>
+  </view>
+</view>
+
+<!-- 标签页 -->
+<view class="tab-box">
+  <van-row>
+    <van-col span="8">
+      <view class="hot-tabs">
+        <text class='{{ischecked==0?"tab-checked":""}}' data-id="0" bindtap="changeTab">热榜</text>
+        <view class="chooseScope" bindtap="onChooseShow">
+          <text>一月内</text>
+          <van-icon name="arrow-down"/>
+        </view>
+      </view>
+    </van-col>
+    <van-col span="4">
+      <view class='tabs {{ischecked==1?"tab-checked":""}}' data-id="1" bindtap="changeTab">推荐</view>
+    </van-col>
+    <van-col span="4">
+      <view class='tabs {{ischecked==2?"tab-checked":""}}' data-id="2" bindtap="changeTab">最新</view>
+    </van-col>
+  </van-row>
+</view>
+
+<!-- 帖子部分 -->
+<view class="post-box" wx:for="{{scopeOptions}}">
+  <view class="post">
+    <view class="poster">用户名 · 2021-02-01 15:45</view>
+    <view class="post-title">从一道让我失眠的 Promise 面试题开始，深入分析 Promise 实现细节</view>
+    <view class="operation-box">
+      <van-row>
+        <van-col span="5">
+          <view class="operation">
+            <van-icon name="share-o" color="#b2bac2" />
+            <span>分享</span>
+          </view>
+        </van-col>
+        <van-col span="5">
+          <view class="operation">
+            <van-icon name="comment-o" color="#b2bac2" />
+            <span>评论</span>
+          </view>
+        </van-col>
+        <van-col span="5">
+          <view class="operation">
+            <van-icon name="good-job-o" color="#b2bac2" />
+            <span>评论</span>
+          </view>
+        </van-col>
+      </van-row>
+    </view>
+  </view>
+</view>
+
+<!-- 上拉菜单 -->
+<van-action-sheet
+  show="{{ show }}"
+  z-index="10000"
+  actions="{{ actions }}"
+  cancel-text="取消"
+  bind:close="onClose"
+  bind:select="onSelect"
+  bind:cancel="onClose"
+/>
+
+<!-- 悬浮按钮 -->
+<button class="bottom-btn goTop" bindtap="goTop">
+  <van-icon name="arrow-up" color="#6e9bcc" size="20px" />
+</button>
+<button class="bottom-btn" bindtap="goEdit">
+  <van-icon name="edit" color="#6e9bcc" size="20px" />
+</button>

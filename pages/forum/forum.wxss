@@ -1,0 +1,139 @@
+/* pages/forum/forum.wxss */
+page {
+  background: #fff;
+  padding-bottom: 150rpx;
+}
+
+.container {
+ padding: 20rpx 0;
+}
+
+swiper{
+  width: 95%;
+  height: 200rpx;
+  background-color: #555;
+  margin:0 auto;
+  border-radius: 10rpx;
+}
+
+swiper image{
+  width: 100%;
+  height: 100%;
+}
+
+.top-search {
+  width: 90%;
+  margin:30rpx auto;
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid #eee;
+}
+
+.top,.hot {
+  display: inline-flex;
+  align-items:center;
+  margin-bottom: 30rpx;
+}
+
+.top-search span {
+  font-size: 32rpx;
+  display: inline-block;
+  white-space: nowrap; 
+  width: 80%; 
+  overflow: hidden;
+  text-overflow:ellipsis;
+  letter-spacing: 3rpx;
+  margin-left: 15rpx;
+}
+
+.tab-box {
+  width: 90%;
+  margin:30rpx auto;
+}
+
+.tabs {
+  font-size: 35rpx;
+  font-weight: bold;
+  color: #909090;
+  border-left: 2rpx solid #eee;
+  text-align: center;
+}
+
+.hot-tabs {
+  font-size: 35rpx;
+  font-weight: bold;
+  color: #909090;
+}
+
+.chooseScope {
+  margin-left: 10rpx;
+  border: 2rpx solid #909090;
+  display: inline-flex;
+  align-items:center;
+  padding: 0 5rpx;
+  width: 50px;
+}
+
+.chooseScope text {
+  font-size: 30rpx;
+  font-weight: initial;
+
+}
+
+.tab-checked {
+  color: #000;
+}
+
+.post-box {
+  border-top: 2rpx solid #eee;
+  width: 90%;
+  margin:0 auto;
+  padding: 20rpx 0;
+}
+
+.poster {
+  font-size: 30rpx;
+  color: #b2bac2;
+  margin-bottom: 30rpx;
+}
+
+.post-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.operation-box {
+  color: #b2bac2;
+  margin-top: 30rpx;
+}
+
+.operation {
+  display: inline-flex;
+  align-items:center;
+}
+
+.operation span{
+  font-size: 30rpx;
+  margin-left: 5rpx;
+}
+
+.bottom-btn{
+  position: fixed;
+  width:40px;
+  height:40px;
+  bottom: 60px;
+  right: 10px;
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 3px 3px 3px #999;
+  line-height: 50px;
+  text-align: center;
+  z-index: 999;
+  padding: 0;
+}
+.goTop{
+  bottom: 110px;
+}
+
+button::after {
+  border: 0px solid rgba(0,0,0,.2);
+}
