@@ -36,6 +36,102 @@ page {
   margin-bottom: 20rpx;
 }
 
+.voice-search {
+  height: 100%;
+  width: 100%;
+  background-color: #212121;
+  position: fixed;
+}
+
+.record-result-box {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.record-result {
+  color: #000;
+  padding: 5rpx 15rpx;
+  box-shadow: 0px 0px 5px #999;
+  background-color: #fff;
+  margin: 10px auto;
+  border-radius: 5rpx;
+}
+
+.recording {
+  margin-top: 50px;
+}
+
+.recording image {
+  width: 100%;
+}
+
+.record {
+  width: 100%;
+  position: fixed;
+  bottom: 60px;
+  text-align: center;
+  color: #fff;
+}
+
+.record-btn {
+  width:50px;
+  height:50px;
+  bottom: 60px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px #999;
+  background-color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 50px;
+  z-index: 999;
+  margin: 30rpx auto;
+}
+
+.record-btn :active {
+  background-color: #999;
+  border-radius: 50px;
+}
+
+.record-btn image {
+  width: 35px;
+  height: 35px;
+  padding: 7.5px;
+}
+
+
+.photo-box {
+  width: 90%;
+  background-color: #fff;
+  margin: 20px auto;
+  height: 250px;
+  border-radius: 20rpx;
+  line-height:  250px;
+  text-align: center;
+  color: #999;
+}
+
+.photo-box image {
+  width: 100%;
+}
+
+.takePhoto {
+  margin-top: 50px;
+}
+
+.photoResult {
+  padding: 30rpx 30rpx 0rpx 30rpx;
+}
+
+.photoResult span{
+  margin: 20rpx 20rpx 0rpx 20rpx;
+  padding: 5rpx 15rpx;
+  box-shadow: 0px 0px 5px #999;
+  background-color: #6e9bcc;
+  border-radius: 5rpx;
+  color: #fff;
+  display:inline-block;
+}
+
 .mask{
   width:100%;
   height:100%;

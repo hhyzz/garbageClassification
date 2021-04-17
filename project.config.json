@@ -1,4 +1,5 @@
 {
+	"cloudfunctionRoot": "cloudfunction/",
 	"description": "项目配置文件",
 	"packOptions": {
 		"ignore": []
@@ -52,6 +53,7 @@
 	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"list": []
@@ -123,7 +125,7 @@
 					"id": 7,
 					"name": "搜索页面",
 					"pathName": "pages/search/search",
-					"query": "way=1",
+					"query": "way=2",
 					"scene": null
 				}
 			]

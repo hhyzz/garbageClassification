@@ -21,14 +21,35 @@
 
 <!-- 语音搜索 -->
 <view class="voice-search"  wx:if="{{way == 1}}">
-  <view class="voiceRecording" bindtouchstart="touchStart" bindtouchend="touchEnd">
-      <image src="../../images/kehuishouwu.png"></image>
-      <text>按住说出你想要的车型名称，松开自动识别</text>
+  <view class="record-result-box" wx:if="{{resultBox}}"><text class="record-result" bindtap="recordSearch">{{result}}</text></view>
+  <view class="recording" wx:if="{{recording}}">
+    <image src="../../images/recording.gif" mode="widthFix"></image>
+  </view>
+  <view class="record">
+    <view class="record-btn" bindtouchstart="{{authed?'touchStart':''}}" bindtouchend="{{authed?'touchEnd':''}}">
+      <image src="../../images/record.png"></image>
+    </view>
+    <view>按住说话</view>
   </view>
 </view>
 
 <!-- 拍照搜索 -->
 <view class="photo-search"  wx:if="{{way == 2}}">
+<camera device-position="back" flash="off" binderror="error" style="width: 100%; height: 300px;" wx:if="{{goCamera}}"></camera>
+  <view class="photo-box" wx:else>
+    <image mode="widthFix" src="{{photoSrc}}" wx:if="{{photoSrc != ''}}"></image>
+    <text wx:else>点击按钮拍照</text>
+  </view>
+  <!-- 识别结果展示 -->
+  <view class="photoResult">
+    <span wx:for="{{photoResult}}" data-keyword='{{item.keyword}}' bindtap='photoSearch'>{{item.keyword}}</span>
+  </view>
+  <!-- 拍照按钮 -->
+  <view class="takePhoto">
+    <view class="record-btn" bindtap="{{camera?'takePhoto':''}}">
+      <image src="../../images/camera.png"></image>
+    </view>
+  </view>
 </view>
 
 <!-- 结果模块 -->
